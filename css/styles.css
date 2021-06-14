@@ -1,4 +1,6 @@
 body {
+  background-image: linear-gradient(to right, rgb(255, 0, 98), #8d41b8);
+
   /* background-color: #ffae00; */
   /* margin: 0 0 0 0; */
   /* background-image: linear-gradient(to right, rgb(255, 0, 98), #8d41b8); */
@@ -26,9 +28,10 @@ nav {
 
 h4 {
   font-size: 2em;
-  color: #8d41b8;
+  color: rgb(255, 0, 98);
   font-weight: bold;
   text-align: justify;
+  margin-top: 10px;
 }
 
 h5 {
@@ -37,9 +40,16 @@ h5 {
   font-weight: bold;
 }
 
+h6 {
+  font-size: 1.2em;
+  /* color: rgb(255, 0, 98); */
+  font-weight: bold;
+}
+
+
 .btn {
   background-color: #ffc444;
-  color: #8d41b8;
+  color: #26001b;
 }
 
 .cabecalho {
@@ -47,7 +57,7 @@ h5 {
   align-items: center;
   justify-content: center;
   margin: auto;
-  background-color: black;
+  background-color: #26001b;
   padding: 15px;
 }
 
@@ -132,7 +142,7 @@ a #subir {
 }
 .menu a:active {
   text-decoration: none;
-  color: red;
+  color: #ffae00;
 }
 
 .menu a {
@@ -167,10 +177,8 @@ div.slider.home {
   background-color: #ffae00;
 }
 
-.promotions {
-  background-color: rgb(255, 0, 98);
-  width: 60%;
-}
+
+
 
 .display {
   display: flex;
@@ -178,13 +186,83 @@ div.slider.home {
   /* margin-top: 15px; */
 }
 
+.content-white {
+  background-color: white;
+  margin-right: 0.4%;
+  width: 80%;
+}
+
 .content {
   margin: 20px 50px;
+  margin-top: 3%;
+
+
 }
 
 .content p {
   font-size: 1.15em;
 }
+
+
+
+.buttons-line-1 {
+  display: flex;
+}
+
+.buttons-line-2 {
+  display: flex;
+}
+
+.natura, .avon, .shopee, .demillus {
+  flex: 1;
+  /* border: 2px solid #26001b; */
+  padding: 3%;
+  background-color: whitesmoke;
+  box-shadow: 0 0 0.5em rgb(148, 148, 148);  
+}
+
+.avon, .shopee {
+  margin-right: 20px;
+}
+
+.card {
+  flex: 1;
+  /* border: 2px solid #26001b; */
+  padding: 3%;
+  background-color: whitesmoke;
+  box-shadow: 0 0 0.5em rgb(148, 148, 148);  
+}
+
+.promo-card {
+  margin-right: 20px;
+  flex: 1;
+  /* border: 2px solid #26001b; */
+  padding: 3%;
+  background-color: whitesmoke;
+  box-shadow: 0 0 0.5em rgb(148, 148, 148);  
+
+}
+
+.promo-card p {
+  text-align: center;
+}
+
+.promo-card nav{
+  text-align: center !important;
+}
+
+.img-page-promo img{
+max-width: 200px;
+max-height: 200px;
+text-align: center;
+/* border: 2px solid; */
+}
+
+.img-page-promo{
+
+  text-align: center;
+  }
+
 
 .img-personal {
   border-radius: 100%;
@@ -207,12 +285,22 @@ p {
   margin-top: 2%;
   padding-left: 2%;
   padding-right: 2%;
+  min-width: 20%;
+      /* min-width: 150px; */
+    max-width: 500px;
+  /* width: 300px !important; */
   /* top: 0; */
 }
 
 .promotions .img-promo-1 img {
   margin-top: 0;
 }
+
+.promotions {
+  width: 20%;
+  }
+  
+
 
 .footer .img-links img {
   border-radius: 100%;
@@ -245,7 +333,7 @@ p {
 }
 
 .footer .create-footer p {
-  background-color: black;
+  background-color: #26001b;
   padding: 10px;
   margin: 0;
 }
@@ -266,13 +354,13 @@ p {
   background-color: yellow;
 } */
 
-form {
-  /* font-family: Verdana, Tahoma, sans-serif; */
+/* form {
+  font-family: Verdana, Tahoma, sans-serif;
   font-size: 15px;
   background-color: #ffae00;
   max-width: 500px;
   border-radius: 5px;
-}
+} */
 
 h1 {
   font-size: 2em;
@@ -283,27 +371,29 @@ h1 {
   text-shadow: 2px 2px 2px white;
 }
 
-input,
 textarea {
-  width: 200px;
-  padding: 10px;
-  color: black;
-  margin-left: 20px;
-  margin-right: 20px;
+  /* padding: 10px; */
+  /* margin-left: 20px; */
+  /* margin-right: 20px; */
   margin-top: 10px;
   margin-bottom: 10px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  border: 1px solid;
+  border: 0.5px solid;
+  min-height: 120px;
+  line-height: 20px;
+  max-width: 100%;
 }
+
 
 input:hover,
 textarea:hover,
 input:focus,
 textarea:focus {
   border-color: #000066;
-  box-shadow: 5px 0px 9px #ffff00;
-  background-color: #ff89f5;
+  /* box-shadow: 5px 0px 9px black; */
+  box-shadow: 0 0 0.5em rgb(148, 148, 148);  
+  background-color: whitesmoke;
   color: black;
   font-weight: bold;
 }
@@ -320,18 +410,24 @@ textarea:focus {
   color: black;
 }
 
-textarea {
-  width: 400px;
-  height: 120px;
-  line-height: 20px;
-  max-width: 400px;
+
+
+form {
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: larger;
 }
 
-form label {
+.content .form-contact form label {
+  color: #397460;
+  font-size: medium;
+}
+
+/* form label {
   margin-left: 20px;
   color: #ffffff;
   font-weight: bold;
-}
+} */
 
 @media (max-width: 600px) {
 }

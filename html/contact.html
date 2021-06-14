@@ -64,7 +64,9 @@
           <nav class="nav-home">
             <a href="../index.html">Home</a>
           <a href="tips.html">Dicas da Jess</a>
+          <a href="promotions.html">Promoções</a>
           <a href="contact.html">Contato</a>
+
           <a href="about.html">Sobre Nós</a>
           </nav>
           
@@ -95,30 +97,55 @@
        
        </div>
 
+       <div class="content-white">
        <div class="content">
-        <h5 style="color: blueviolet;">Contato</h5>
+        <h5 style="text-shadow: 2px 2px 4px rgb(148, 148, 148);">Contato</h5>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae id doloremque consectetur dolorem non, reiciendis ipsam mollitia quod error hic tempore, eligendi quis deserunt similique. Praesentium quibusdam veritatis recusandae voluptatibus!</p>
-      
-        <div class="my-form">
-        <form name="my-contact">
+      <br>
+        <div class="form-contact">
+          <form action="../php/contato.php" method="post" name="form">
+            <label for="nome">Digite seu nome:</label><br />
+            <input type="text" id="nome" name="nome" value="" /><br /><br />
 
-          <h1>Entre em contato</h1>
-        
-          <label for="nome">Nome</label>
-          <input type="text" id="nomeid" placeholder="Digite seu nome" required="required" name="nome" />
-        
-          <label for="fone">Fone</label>
-          <input type="tel" id="foneid" placeholder="(xx)xxxxx-xxxx" name="fone" />
-        
-          <label for="email">Email</label>
-          <input type="email" id="emailid" placeholder="Digite seu e-mail" name="email" /><BR></BR>
-        
-          <textarea placeholder="Deixe sua opnião, sugestações ou dúvida"></textarea>
-        
-          <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
-        </form>
+            <div class="phone-email">
+              <label class="col s12 m4" for="phoneNumber"
+                >Digite seu telefone:</label
+              ><br />
+              <input
+                type="number"
+                id="phoneNumber"
+                name="phoneNumber"
+                value=""
+              /><br /><br />
+
+              <label for="email">Digite seu e-mail:</label><br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value=""
+                
+              /><br /><br />
+            </div>
+            <label name="mensagem" for="textarea"
+              >Digite abaixo sua dúvida ou sugestão:</label
+            ><br /><br />
+            <!-- <input type="email" id="fname" name="fname" value="" /><br /><br /> -->
+
+            <textarea id="story" name="mensagem" rows="5" cols="33"> </textarea>
+            <br />
+            <input
+              type="submit"
+              name="submit"
+              value="ENVIAR"
+              class="waves-effect waves-light btn"
+            />
+
+          </form>
+        </div>
+      
       </div>
-      </div>
+    </div>
 
         <div id="voltarTopo">
           <a href="#" id="subir"><img src="../img/up-arrow.png" alt="voltar para o topo"></a>
