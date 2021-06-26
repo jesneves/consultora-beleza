@@ -31,28 +31,28 @@ $(function () {
 $(document).ready(function () {
   $('.slider').slider({ full_width: true });
 });
-function modalMyScript() {
-  var modal = document.getElementById('myModal');
+// function modalMyScript() {
+//   var modal = document.getElementById('myModal');
 
-  // Get the image and insert it inside the modal - use its "alt" text as a caption
-  var img = document.getElementById('myImg');
-  var modalImg = document.getElementById('img01');
-  var captionText = document.getElementById('caption');
-  img.onclick = function () {
-    modal.style.display = 'block';
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-  };
+//   // Get the image and insert it inside the modal - use its "alt" text as a caption
+//   var img = document.getElementById('myImg');
+//   var modalImg = document.getElementById('img01');
+//   var captionText = document.getElementById('caption');
+//   img.onclick = function () {
+//     modal.style.display = 'block';
+//     modalImg.src = this.src;
+//     captionText.innerHTML = this.alt;
+//   };
 
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName('close')[0];
+//   // Get the <span> element that closes the modal
+//   var span = document.getElementsByClassName('close')[0];
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function () {
-    modal.style.display = 'none';
-  };
-  return true;
-}
+//   // When the user clicks on <span> (x), close the modal
+//   span.onclick = function () {
+//     modal.style.display = 'none';
+//   };
+//   return true;
+// }
 
 $(document).ready(function () {
   $('#subir').click(function () {
@@ -102,10 +102,34 @@ $(function () {
   imgPromotions.innerHTML = imgIterator;
 
   // document.location.reload();
-
-
-
 });
+
+function GetCards() {
+  let showCards = document.getElementById("promotionCards");
+  let setHtml = '';
+  let setHtml2 = '';
+  // showCards.innerHTML = '<div class="buttons-line-1">';
+
+  for (let i = 1; i < 4; i++) {
+    setHtml = '<div class="promo-card" id="' + i + '">'+
+      '<div class="img-page-promo">'+
+          '<a href="#"><img src="../img/promotion' + i +'.jpg" alt="">'+
+          '<h6>Deo Parfum Luna Intenso</h6></a>'+
+          '</div>'+
+    '<p>'+
+      'Compre diretamente do site da <strong>Avon</strong> e receba na'+
+      'comodidade de sua casa.'+
+    '</p>'+
+    '<nav><a target="_blank" href="https://www.jesneves.loja.avon.com.br" class="waves-effect waves-light btn" >VER PROMOÇÃO</a></nav>'+
+  '</div>' + setHtml2;
+  setHtml2 = setHtml;
+  }
+  // showCards.innerHTML = '</div>'
+
+  showCards.innerHTML = setHtml
+  
+  console.log("Estoy aquí")
+}
 
 // imgPromotions.innerHTML = '<div class="img-promo-' + i +'"> <a href=""><img id="' + i +'" src="./img/promotion' + i +'.jpg" alt="' + i +' imagem de produto na promoção"/></a></div>';
 
