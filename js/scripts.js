@@ -90,9 +90,15 @@ $(function () {
     numberOfImg = 6;
   }
 
-  if (windowWidth > 1200) {
+  if (windowWidth > 1200 && windowWidth <= 1600) {
     numberOfImg = 4;
   }
+
+  if (windowWidth > 1600){
+    numberOfImg = 3;
+  }
+
+
 
   for (let i = numberOfImg; i > 0; i--) {
     imgIterator = '<div class="img-promo-' + i +'"> <a href=""><img id="' + i +'" src="../img/promotion' + i +'.jpg" alt="' + i +' imagem de produto na promoção"/></a></div>' + imgIterator2;
@@ -106,12 +112,11 @@ $(function () {
 
 function GetCards() {
   let showCards = document.getElementById("promotionCards");
-  let setHtml = '';
-  let setHtml2 = '';
+  let arrayOfHtml = [];
   // showCards.innerHTML = '<div class="buttons-line-1">';
 
   for (let i = 1; i < 4; i++) {
-    setHtml = '<div class="promo-card" id="' + i + '">'+
+    arrayOfHtml.push('<div class="promo-card" id="' + i + '">'+
       '<div class="img-page-promo">'+
           '<a href="#"><img src="../img/promotion' + i +'.jpg" alt="">'+
           '<h6>Deo Parfum Luna Intenso</h6></a>'+
@@ -121,14 +126,13 @@ function GetCards() {
       'comodidade de sua casa.'+
     '</p>'+
     '<nav><a target="_blank" href="https://www.jesneves.loja.avon.com.br" class="waves-effect waves-light btn" >VER PROMOÇÃO</a></nav>'+
-  '</div>' + setHtml2;
-  setHtml2 = setHtml;
+  '</div>');
   }
   // showCards.innerHTML = '</div>'
 
-  showCards.innerHTML = setHtml
+  showCards.innerHTML = arrayOfHtml;
   
-  console.log("Estoy aquí")
+  console.log("Estoy aquí");
 }
 
 // imgPromotions.innerHTML = '<div class="img-promo-' + i +'"> <a href=""><img id="' + i +'" src="./img/promotion' + i +'.jpg" alt="' + i +' imagem de produto na promoção"/></a></div>';
