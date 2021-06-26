@@ -1,3 +1,15 @@
+function reloadPage(){
+  // Sem redimencionamento à 100ms!
+  location.reload();
+}
+
+var reload;
+window.onresize = function(){
+clearTimeout(reload);
+reload = setTimeout(reloadPage, 100);
+};
+
+
 function enviar() {
   var nome = document.getElementById('name').value;
   var telefone = document.getElementById('phoneNumber').value;
@@ -10,9 +22,10 @@ function enviar() {
 }
 
 $(function () {
-  $('#header').load('header.html');
-  $('#imports').load('imports.html');
-  $('#footer').load('footer.html');
+  $('#header').load('../html/header.html');
+  $('#footer').load('../html/footer.html');
+  // $('#scripts').load('html/importScripts.html');
+
 });
 
 $(document).ready(function () {
@@ -59,3 +72,40 @@ function Enviar() {
     );
   }
 }
+
+
+$(function () {
+  var imgPromotions = document.getElementById("promotions");
+  var windowWidth = window.innerWidth;
+  var numberOfImg = 0;
+  var imgIterator = '';
+  var imgIterator2 = '';
+
+
+  if (windowWidth >= 611 && windowWidth <= 800) {
+    numberOfImg = 9;
+  }
+
+  if (windowWidth > 800 && windowWidth <= 1200) {
+    numberOfImg = 6;
+  }
+
+  if (windowWidth > 1200) {
+    numberOfImg = 4;
+  }
+
+  for (let i = numberOfImg; i > 0; i--) {
+    imgIterator = '<div class="img-promo-' + i +'"> <a href=""><img id="' + i +'" src="../img/promotion' + i +'.jpg" alt="' + i +' imagem de produto na promoção"/></a></div>' + imgIterator2;
+    imgIterator2 = imgIterator;
+  }
+
+  imgPromotions.innerHTML = imgIterator;
+
+  // document.location.reload();
+
+
+
+});
+
+// imgPromotions.innerHTML = '<div class="img-promo-' + i +'"> <a href=""><img id="' + i +'" src="./img/promotion' + i +'.jpg" alt="' + i +' imagem de produto na promoção"/></a></div>';
+
