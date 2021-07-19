@@ -15,7 +15,7 @@ form.addEventListener('submit', (e) => {
 
     let content = document.getElementById('content');
 
-    let carregando = '<img width="50px" src="../assets/loading.gif" alt="Logotipo">';
+    let carregando = '<img width="50px" src="./assets/loading.gif" alt="Carregando">';
     let pronto = '<p>Cadastrado com sucesso!<p>'
 // '   <a href="index.html"><button id="button">Ir para home</button></a>';
 
