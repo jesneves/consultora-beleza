@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.logo {
+    background-attachment: fixed; 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#logo {
+    width: 100%; 
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+}
+
+section {
+    margin: 0;
+}
+
+.text-form {
+    /* background-color: #fff; */
+    /* border-radius: 25px; */
+    /* padding: 25px; */
+    /* max-width: 450px; */
+    /* background-color: rgba(0,0,0,0.5); */
+    /* display: grid; */
+
+}
+
+.form {
+    position: absolute;
+    /* background-color: rgba(0,0,0,0.5); */
+    /* border-radius: 25px; */
+    color:#fff;
+    text-align: center;
+    font-size: 1.2em;
+    top: 50%;
+    width: 43%;
+    line-height: 30px;
+    padding: 0 20px 0 20px;
+
+}
+
+.form p {
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+
+}
+
+.form img {
+    text-align: center;
+}
+
+input {
+    width: 250px;
+    border:1px solid #000;
+    padding:5px;
+}
+
+form :hover, form :active {
+    background-color: whitesmoke;
+}
+
+
+h2 {
+    font-style: oblique;
+    font-size: 1.8em;
+    position: absolute;
+    /* max-width: 600px; */
+    /* background-color: rgba(0,0,0,0.5); */
+    /* box-shadow: 0 1em 10em gold; */
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+    color:rgb(255, 255, 255);
+    text-align: center;
+    top: 30%;
+    padding: 0 20px 0 20px;
+    width: 43%;
+
+    /* left: 10%; */
+    /* line-height: 30px; */
+}
+
+#button {
+    font-style: oblique;
+    padding:5px;
+    background-color:#036;
+    border:1px solid #000;
+    color:#fff;
+    font-weight:bold;
+
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+
+    /* height: 150px; */
+    /* padding: 25px; */
+    /* text-align: center; */
+    /* background-color: #000; */
+    /* color: #fff; */
+}
+
+footer p {
+
+    margin: 0;
+    color: white;
+    padding: 5px;
+}
+
+@media (max-width: 600px) {
+    .form {
+        width: 100%;
+        padding: 0px;
+    }
+
+    h2 {
+        width: 100%;
+        padding: 0;        
+    }
+}
+
+@media (max-height: 400px) {
+    .form {
+
+    }
+
+    h2 {
+        top: 15%;
+    }
+}
+
+@media (max-height: 270px) {
+    .form {
+
+    }
+
+    h2 {
+        top: 5%;
+
+    }
+}
