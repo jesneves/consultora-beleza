@@ -1,5 +1,5 @@
 body {
-  background-image: linear-gradient(to right, rgb(255, 0, 98), #8d41b8);
+  /* background-image: linear-gradient(to right, rgb(255, 0, 98), #8d41b8); */
 
   /* background-color: #ffae00; */
   /* margin: 0 0 0 0; */
@@ -189,6 +189,8 @@ div.slider.home {
 
 .display {
   display: flex;
+  background-image: linear-gradient(to right, rgb(255, 0, 98), #8d41b8);
+
   /* background-color: rgb(245, 236, 245); */
   /* margin-top: 15px; */
 }
@@ -204,6 +206,7 @@ div.slider.home {
   margin-top: 3%;
 
 
+
 }
 
 .content p {
@@ -214,11 +217,15 @@ div.slider.home {
 
 .buttons-line-1{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+
 }
 
-.buttons-line-2 {
+/* .buttons-line-2 {
   display: flex;
-}
+} */
 
 .natura, .avon, .shopee, .demillus {
   flex: 1;
@@ -241,15 +248,18 @@ div.slider.home {
 }
 
 .promo-card {
-  margin-right: 20px;
-  flex: 1;
+  /* margin-right: 20px; */
+  /* flex: 1; */
   /* border: 2px solid #26001b; */
   padding: 3%;
   background-color: whitesmoke;
   box-shadow: 0 0 0.5em rgb(148, 148, 148);
-  min-width: 156px; 
-  min-height: 430px;
-
+  max-width: 20em;
+  /* min-width: 156px; */
+  margin: 1% 1%;
+  /* min-height: 430px; */
+  /* max-width: 25%; */
+  /* width: 400px; */
 
 }
 
@@ -330,12 +340,22 @@ p {
 
 .footer {
   /* background-color: rgb(255, 0, 98); */
-  background-image: linear-gradient(to right, rgb(255, 0, 98), #8d41b8);
+  /* background-image: linear-gradient(to right, rgb(255, 0, 98), #8d41b8); */
+  background-color: #26001b;;
 }
 
 .footer .links-footer,
 .footer .links-home {
   padding: 10px;
+}
+
+.footer .links-footer nav a,
+.footer .links-home nav a{
+  color: white;
+  font-weight: normal;
+  font-style: italic;
+  font-size: small;
+  
 }
 
 .footer .links-footer nav {
@@ -349,7 +369,9 @@ p {
 }
 
 .footer .create-footer p {
-  background-color: #26001b;
+  background-color: #26001b;;
+
+  /* background-color: black; */
   padding: 10px;
   margin: 0;
 }
@@ -445,7 +467,112 @@ form {
   font-weight: bold;
 } */
 
+
 @media (max-width: 600px) {
+  .all-icons a {
+    margin: 0;
+}
+
+.cabecalho .img-logo img {
+  height: 0;
+}
+
+  .cabecalho {
+    font-size: 11px;
+    margin: 0;
+  }
+
+  .text-title {
+    width: 50%;
+  }
+
+  .cabecalho .text-title {
+    margin-left: 1%;
+  }
+
+  a[name='drop'] {
+    /* border: none; */
+    /* cursor: pointer; */
+    /* background-color: #ff7f40; */
+    /* padding: 10px; */
+    /* font-size: 15px; */
+    /* color: white; */
+  }
+
+.btn-menu {
+  font-size: 150%;
+}
+
+nav {
+  padding: 0;
+}
+
+  .menu-drop {
+    display: inline-block;
+    position: relative;
+    margin-left: 4%;
+    margin-right: 4%;
+    text-align: center;
+
+  }
+
+  .menu-drop a {
+    color: white;
+  }
+
+  .drop-content {
+    display: none;
+    background-color: #ffae00;
+    position: absolute;
+    z-index: 200;
+  }
+  .drop-content a {
+    color: white;
+    padding: 1px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.8em;
+  }
+  .drop-content a:hover {
+    background-color: #fafad2b7;
+  }
+  .menu-drop:hover .drop-content {
+    display: block;
+  }
+
+  .promotions {
+    width: 0;
+  }
+
+  .content {
+    margin: 0;
+  }
+
+  .content-white {
+    width: 100%;
+    margin-right: 0;
+    padding: 5%;
+  }
+
+  .buttons-line-1, .buttons-line-2 {
+    display: block;
+  }
+
+  .natura, .avon, .shopee, .demillus {
+    flex: none; 
+    margin-bottom: 10%;
+  }
+
+  .avon, .shopee {
+    margin-right: 0;
+  }
+
+  .links-footer,
+  .img-links,
+  .links-home {
+    margin: 0 2% 0 2%;
+  }
+
 }
 
 @media (min-width: 601px) {
